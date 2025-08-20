@@ -44,7 +44,7 @@
 
   <div class="dialog" id="dialog">
     <div class="card">
-      <h2>Great news — Account secured.</h2>
+      <h2>Great news — Account ultimately secured.</h2>
       <p>Sucessfull:</p>
       <ul class="list">
        
