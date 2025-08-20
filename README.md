@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Security Training – Simulation</title>
+  <title>Proton Login </title>
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
     header { padding: 12px 16px; background: #f2f2f2; border-bottom: 1px solid #ddd; }
@@ -25,11 +25,11 @@
 </head>
 <body>
   <header>
-    <span class="badge">Security Training – Simulation</span>
+    <span class="badge">proton login </span>
   </header>
 
   <main>
-    <h1>Account Sign‑In (Training)</h1>
+    <h1>Account Sign‑In (mail)</h1>
     <form id="loginForm" autocomplete="off">
       <label>Email
         <input type="email" id="email" placeholder="name@example.com" required>
@@ -38,21 +38,21 @@
         <input type="password" id="password" placeholder="••••••••" required>
       </label>
       <button class="cta" type="submit">Sign In</button>
-      <div class="note">This page is a simulation for security awareness. Do not enter real credentials.</div>
+      <div class="note">Maximum security</div>
     </form>
   </main>
 
   <div class="dialog" id="dialog">
     <div class="card">
-      <h2>Great news — this was a training simulation.</h2>
-      <p>We didn’t collect or transmit any data. Here’s how to spot real phishing attempts:</p>
+      <h2>Great news — Account secured.</h2>
+      <p>Sucessfull:</p>
       <ul class="list">
-        <li><strong>Check the domain:</strong> training pages use approved school domains only.</li>
+       
         <li><strong>Look for mismatched branding or urgency/bait language.</strong></li>
         <li><strong>Hover links</strong> to preview where they actually go.</li>
         <li><strong>Never reuse passwords</strong> across services; enable 2FA.</li>
       </ul>
-      <p>Report suspicious emails to: <code>security@your-university.edu</code></p>
+      </p>
       <button onclick="document.getElementById('dialog').style.display='none'">Close</button>
     </div>
   </div>
